@@ -1,0 +1,117 @@
+.sponsors__tier {
+  margin-bottom: var(--space-10);
+}
+
+.sponsors__tier:last-of-type {
+  margin-bottom: var(--space-8);
+}
+
+.sponsors__tier-label {
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-bottom: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.sponsors__tier-label::before,
+.sponsors__tier-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* Platinum tier label gets gold color */
+.sponsors__tier:first-child .sponsors__tier-label {
+  color: var(--color-gold);
+}
+
+.sponsors__logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sponsor logo link */
+.sponsor-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4) var(--space-6);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base), filter var(--transition-base);
+  filter: grayscale(30%) brightness(0.9);
+}
+
+.sponsor-logo:hover {
+  border-color: var(--color-border-accent);
+  box-shadow: var(--shadow-accent);
+  filter: grayscale(0%) brightness(1);
+}
+
+/* Large tier */
+.sponsors__logos--large .sponsor-logo {
+  min-width: 200px;
+  min-height: 80px;
+}
+
+.sponsors__logos--large .sponsor-logo img {
+  max-height: 60px;
+  width: auto;
+}
+
+/* Medium tier */
+.sponsors__logos--medium .sponsor-logo {
+  min-width: 160px;
+  min-height: 64px;
+}
+
+.sponsors__logos--medium .sponsor-logo img {
+  max-height: 44px;
+  width: auto;
+}
+
+/* Small tier */
+.sponsors__logos--small .sponsor-logo {
+  min-width: 130px;
+  min-height: 52px;
+}
+
+.sponsors__logos--small .sponsor-logo img {
+  max-height: 36px;
+  width: auto;
+}
+
+/* Text-only fallback for missing logos */
+.sponsor-logo--text {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* CTA */
+.sponsors__cta {
+  text-align: center;
+  padding-top: var(--space-10);
+  border-top: 1px solid var(--color-border);
+}
+
+.sponsors__cta p {
+  margin-bottom: var(--space-4);
+  margin-inline: auto;
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+}
